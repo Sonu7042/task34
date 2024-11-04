@@ -12,7 +12,7 @@ const Form = () => {
 
 
   const fetchDataUser = async () => {
-    const response = await axios.get("http://localhost:9000/");
+    const response = await axios.get("https://task34-six.vercel.app/");
     setFetchData(response.data.data);
   };
 
@@ -24,7 +24,8 @@ const Form = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await axios.post("http://localhost:9000/save", user);
+    const response = await axios.post("https://task34-six.vercel.app/save", user);
+    setUser({name:"", email:"", number:""})
     fetchDataUser()
   };
 
